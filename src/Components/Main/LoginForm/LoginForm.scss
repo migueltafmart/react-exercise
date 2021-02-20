@@ -1,0 +1,30 @@
+form {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 24px;
+  input, textarea {
+    resize: none;
+    margin-bottom: 12px;
+    font-size: large;
+    padding: 6px;
+    border-radius: 6px;
+    border: solid 3px dodgerblue;
+    &[type="submit"] {
+      background: dodgerblue;
+      border: none;
+      color: white;
+      padding: 6px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+    &::placeholder{
+      color: #1e8fff83;
+    }
+  }
+  textarea{
+    height: 124px;
+  }
+}

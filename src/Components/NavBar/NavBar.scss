@@ -1,0 +1,29 @@
+nav.NavBar {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  box-shadow: 0 6px 12px black;
+  padding: 0;
+  padding-bottom: 0;
+  div.wrapper {
+    justify-content: space-around;
+  }
+
+  a {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+  }
+  a.active {
+    border-top: 3px solid red;
+  }
+  span{
+    padding-top: 6px;
+  }
+  p {
+    margin: 0;
+  }
+}
