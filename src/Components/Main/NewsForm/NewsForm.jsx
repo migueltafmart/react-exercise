@@ -8,11 +8,9 @@ class NewsForm extends Component {
 
     this.state = {};
   }
-  componentDidUpdate(prevProps, prevState) {
-    window.location.assign("/");
-  }
-  
+
   onSubmit = (e) => {
+
     e.preventDefault();
     let author = document.querySelector("input[name='author']");
     let title = document.querySelector("input[name='title']");
@@ -32,7 +30,7 @@ class NewsForm extends Component {
     content.value = "";
     urlToImage.value = "";
     this.props.shouldRedirect(true);
-    //window.location.assign("/feed")
+  
   };
   render() {
     if(this.props.redirect){

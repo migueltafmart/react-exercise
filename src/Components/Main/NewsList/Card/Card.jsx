@@ -8,9 +8,11 @@ class Card extends Component {
        
     }
   }
+
   deleteSelf = () => {
     this.props.deleteSelf()
   }
+  
   render() {
     return <article className="Card">
       <h3>{this.props.data.title}</h3>

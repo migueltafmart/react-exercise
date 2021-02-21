@@ -15,9 +15,6 @@ class NewsList extends Component {
       );
     });
   };
-  componentWillUnmount () {
-    this.props.shouldRedirect(false);
-  }
   render() {
     return (
       <div className="wrapper">
