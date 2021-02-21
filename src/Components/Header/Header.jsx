@@ -7,7 +7,7 @@ class Header extends Component {
       <div className="wrapper">
         <UserContextConsumer>
           {context => {
-            return context.user === ""? <a href="/"><button>Log In</button> </a>: <a>Logged in as {context.user}</a>
+            return context.user === ""? <a href="/"><button>Log In</button> </a>: <a href="/">Logged in as <b>{context.user}</b></a>
           }}
         </UserContextConsumer>
        

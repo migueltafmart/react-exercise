@@ -4,8 +4,12 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/NavBar/NavBar";
-function App() {
-  return (
+import React, { Component } from 'react'
+
+
+class App extends Component {
+  render () {
+    return (
     <>
       <Header />
       <BrowserRouter>
@@ -16,6 +20,8 @@ function App() {
       
     </>
   );
+  }
+  
 }
 
 export default App;
