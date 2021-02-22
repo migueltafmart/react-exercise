@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import LoginForm from "./LoginForm/LoginForm";
 import NewsForm from "./NewsForm/NewsForm";
 import NewsList from "./NewsList/NewsList";
@@ -37,11 +37,11 @@ class Main extends Component {
     return (
       <main className="Main">
         <Switch>
-        <>
           <Route exact path="/" component={LoginForm} />
-          <Route path="/admin" component={() => <NewsForm postNews={this.postNews} shouldRedirect={this.shouldRedirect} redirect={this.state.redirect}/> } />
+          <Route path="/admin">
+            {this.state.redirect ? <Redirect to="/feed"/>  :  <NewsForm postNews={this.postNews} shouldRedirect={this.shouldRedirect}/>}
+          </Route>
           <Route path="/feed" component={ () => <NewsList data={this.state.newsList} deleteNews={this.deleteNews} shouldRedirect={this.shouldRedirect} />}  />
-        </>
       </Switch>
       </main>
       

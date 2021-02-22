@@ -10,7 +10,7 @@ class LoginForm extends Component {
     c.getUser(user.value);
     user.value = "";
   };
-
+  
   render() {
     return (
       <div className="wrapper">

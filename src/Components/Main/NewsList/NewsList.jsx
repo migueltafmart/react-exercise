@@ -7,7 +7,7 @@ class NewsList extends Component {
 
     this.state = {};
   }
-
+  
   onData = () => {
     return this.props.data.map((news, i) => {
       return (

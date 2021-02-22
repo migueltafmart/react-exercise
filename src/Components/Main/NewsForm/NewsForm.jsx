@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import { UserContextConsumer } from "../../../context/userContext";
 
 class NewsForm extends Component {
@@ -8,7 +7,9 @@ class NewsForm extends Component {
 
     this.state = {};
   }
-
+  componentWillUnmount() {
+    this.props.shouldRedirect(false);
+  }
   onSubmit = (e) => {
 
     e.preventDefault();
@@ -33,9 +34,6 @@ class NewsForm extends Component {
   
   };
   render() {
-    if(this.props.redirect){
-      return <Redirect to="/feed"/>;
-    }
     return (
       <div className="wrapper">
         <form onSubmit={(event) => this.onSubmit(event)}>
